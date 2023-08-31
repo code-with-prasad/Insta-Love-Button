@@ -1,2 +1,3 @@
 # Insta-Love-Button
-out press double click the show love on this image 
+in this simple project you can press double click then show love on this image
+
