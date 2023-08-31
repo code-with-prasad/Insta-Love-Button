@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Button </title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: orange;
+        }
+
+        .container {
+            height: 400px;
+            width: 300px;
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            padding: 5px;
+            position: relative;
+        }
+
+        .container img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 10px;
+            
+        }
+        .container img:hover{
+            cursor: pointer;
+        }
+        .container i{
+            color: rgb(232, 70, 70);
+            font-size: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0.6;
+            transition: all 0.1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="girl.jpg" alt="img">
+        <i class="ri-heart-3-fill"></i>
+    </div>
+
+    <script>
+        let container = document.querySelector('.container');
+        let love = document.querySelector('i');
+        container.addEventListener('dblclick',function(){
+            love.style.transform = 'translate(-50%, -50%)  scale(1)';
+            setTimeout(()=>{
+                love.style.transform = 'translate(-50%, -50%)  scale(0)';
+            },1000)
+        })
+    </script>
+</body>
+
+</html>
